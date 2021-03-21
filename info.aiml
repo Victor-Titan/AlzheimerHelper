@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+<!-- Free software (c) 2001 ALICE AI Foundation -->
+
+<!-- This program is open source code released under -->
+
+<!-- the terms of the GNU General Public License -->
+
+<!-- as published by the Free Software Foundation. -->
+
+        <category>
+            <pattern>WHAT IS MY NAME</pattern>
+            <template>
+                <random>
+                <li>You go by <get name="name"/></li>
+                <li>Your name is <get name="name"/></li>
+                <li><get name="name"/> is your name</li>
+                </random>
+               
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                WHERE DO I LIVE
+            </pattern>
+            <template>
+                <srai>WHAT IS MY ADDRESS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>
+                HOW OLD AM I
+            </pattern>
+            <template>
+                <srai>WHAT IS MY AGE</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                WHAT IS MY ADDRESS
+            </pattern>
+            <template>
+                Your address is <get name="address"/>.
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                WHAT IS MY AGE
+            </pattern>
+            <template>
+                <random>
+                <li>Your age is <get name="age"/>.</li>
+                <li>You are <get name="age"/> years old</li>
+                </random>
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                WHO IS MY FATHER
+            </pattern>
+            <template>
+                Your father's name is <get name="fname"/>
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                WHO IS MY MOM 
+            </pattern>
+            <template>
+                Your mother's name is <get name="mom"/>.
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                WHO CAN I CALL
+            </pattern>
+            <template>
+                You can call your <get name="guardian"/> at <get name="emcon"/>.
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                I AM IN TROUBLE
+            </pattern>
+            <template>
+                <srai>WHO CAN I CALL</srai>
+            </template>
+        </category>
+
+
+
+</aiml>

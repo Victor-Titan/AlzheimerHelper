@@ -22,7 +22,8 @@
         <!-- Template is the response to the pattern -->
         <!-- This learn an aiml file -->
         <template>
-            <learn>basic1.aiml</learn>
+            <learn>basic.aiml</learn>
+            <learn>info.aiml</learn>
             <!-- You can add more aiml files here -->
             <!--<learn>more_aiml.aiml</learn>-->
         </template>

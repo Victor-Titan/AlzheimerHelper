@@ -19,23 +19,7 @@
             </template>
         </category>
 
-        <category>
-            <pattern>
-                SET ADDRESS *
-            </pattern>
-            <template>
-                Setting address as<set name="address"><star/></set>
-            </template>
-        </category>
         
-        <category>
-            <pattern>
-                WHAT IS MY ADDRESS
-            </pattern>
-            <template>
-                Your address is <get name="address"/>. Would you like to see directions to it?
-            </template>
-        </category>
 
         <category>
             <pattern>WHAT ARE YOU</pattern>
@@ -53,33 +37,12 @@
             </template>
         </category>
 
-        <category>
-            <pattern>
-                SET NAME *
-            </pattern>
-            <template>
-                MY NAME IS *
-            </template>
-        </category>
+        
 
-        <category>
-        <pattern>MY NAME IS *</pattern>
-            <template>
-               <set name="name"><star/></set> is a nice name.
-            </template>
-        </category>
 
-        <category>
-        <pattern>WHAT IS MY NAME</pattern>
-            <template>
-                <random>
-                <li>You go by <get name="name"/></li>
-                <li>Your name is <get name="name"/></li>
-                <li><get name="name"/> is your name</li>
-                </random>
-               
-            </template>
-        </category>
+
+
+        
 
         
     </aiml>
