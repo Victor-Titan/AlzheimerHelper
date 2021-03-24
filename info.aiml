@@ -82,16 +82,49 @@
                 WHO CAN I CALL
             </pattern>
             <template>
-                You can call your <get name="guardian"/> at <get name="emcon"/>.
+                You can call your guardian <get name="guardian"/> at <get name="emcon"/>.
             </template>
         </category>
 
         <category>
             <pattern>
-                I AM IN TROUBLE
+                HELP *
+            </pattern>
+            <template>
+                <srai>HELP</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                HELP
+            </pattern>
+            <template>
+                What seems to be the issue? You can call your guardian <get name="guardian"/> at <get name="emcon"/>.
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                I AM IN TROUBLE 
             </pattern>
             <template>
                 <srai>WHO CAN I CALL</srai>
+            </template>
+        </category>
+
+
+        <category>
+            <pattern>THANK YOU</pattern>
+            <template>You're Welcome ;)</template>
+        </category>
+
+        <category>
+            <pattern>
+                THANK YOU *
+            </pattern>
+            <template>
+                <srai>THANK YOU</srai>
             </template>
         </category>
 

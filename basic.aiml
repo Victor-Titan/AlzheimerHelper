@@ -10,6 +10,16 @@
 
 
         <category>
+            <pattern>HELLO *</pattern>
+            <template>
+                <srai>
+                    HELLO
+                </srai>
+            </template>
+        </category>
+
+        
+        <category>
             <pattern>HELLO</pattern>
             <template>
                 <random>
@@ -19,18 +29,47 @@
             </template>
         </category>
 
+        <category>
+            <pattern>BYE</pattern>
+            <template>BYE</template>
+            </category>
+            
+            <category>
+            <pattern>BYE *</pattern>
+            <template><srai>BYE</srai></template>
+            </category>
+            
+        <category>
+            <pattern>HOW ARE YOU</pattern>
+                <template>I AM FINE WHAT ABOUT YOU</template>
+        </category>
+        
+        <category>
+            <pattern>HOW ARE YOU *</pattern>
+                <template><srai>HOW ARE YOU</srai></template>
+        </category>
+
         
 
         <category>
             <pattern>WHAT ARE YOU</pattern>
             <template>
-                I'm a bot, silly!
+                I'm a bot tasked with helping you!
             </template>
         </category>
 
         <category>
             <pattern>
                 HI
+            </pattern>
+            <template>
+                <srai>HELLO</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                HI *
             </pattern>
             <template>
                 <srai>HELLO</srai>
