@@ -14,6 +14,16 @@ else:
 
 row = 0
 
+def register(name, address, phno, dad, mom, emcon, guardian, age):
+    kernel.setPredicate('name', name)
+    kernel.setPredicate('address', address)
+    kernel.setPredicate('phno', phno)
+    kernel.setPredicate('fname', dad)
+    kernel.setPredicate('mom', mom)
+    kernel.setPredicate('emcon', emcon)
+    kernel.setPredicate('guardian', guardian)
+    kernel.setPredicate('age', age)
+
 while True:
     c = input("1 to Login\n2 to Register\n")
     if(c=="1"):
@@ -35,7 +45,7 @@ while True:
             print("Wrong credentials! Try again!\n")
         
     elif(c=="2"):
-        id=input("Enter id: ")
+        id = input("Enter id: ")
         name=input("Enter name: ")
         pwd=input("Enter password: ")
         address=input("Enter address: ")
@@ -45,24 +55,11 @@ while True:
         emcon=input("Enter emcon: ")
         guardian=input("Enter guardian's name: ")
         age=input("Enter age: ")
-
-        cur.execute("INSERT INTO info (id,pwd,name,addr,phno,dad,mom,emcon,guardian,age) VALUES (?,?,?,?,?,?,?,?,?,?)",(id,pwd,name,address,phno,dad,mom,emcon,guardian,age))
-        conn.commit()
-        cur.execute("SELECT * FROM info WHERE id=? ",(id,))
-        row = cur.fetchone()
-        kernel.setPredicate('name',row[2])
-        kernel.setPredicate('address',row[3])
-        kernel.setPredicate('phno',row[4])
-        kernel.setPredicate('fname',row[5])
-        kernel.setPredicate('mom',row[6])
-        kernel.setPredicate('emcon',row[7])
-        kernel.setPredicate('guardian',row[8])
-        kernel.setPredicate('age',row[9])
+        register(name, pwd, address, phno, dad, mom, emcon, guardian, age)
         break
     
     else:
         print("Wrong choice! Try again!\n")
-
 
 #name = input("Enter your name: ")
 #kernel.setPredicate('name',name)
