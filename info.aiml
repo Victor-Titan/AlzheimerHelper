@@ -43,19 +43,19 @@
                 WHAT IS MY ADDRESS
             </pattern>
             <template>
-                Your address is <get name="address"/>. Do you want to go to it?
+                Do you want to go to it?
             </template>
         </category>
 
         <category>
             <pattern>YES</pattern>
-            <that>Your address is <get name="address"/>. Do you want to go to it?</that>
+            <that>Do you want to go to it?</that>
             <template><get name="address"/></template>
         </category>
 
         <category>
             <pattern>NO</pattern>
-            <that>Your address is <get name="address"/>. Do you want to go to it?</that>
+            <that>Do you want to go to it?</that>
             <template>OK</template>
         </category>
 
