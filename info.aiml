@@ -43,19 +43,19 @@
                 WHAT IS MY ADDRESS
             </pattern>
             <template>
-                Do you want to go to it
+                You live at <get name="address"/>. Do you want to go to it
             </template>
         </category>
 
         <category>
             <pattern>YES</pattern>
-            <that>DO YOU WANT TO GO TO IT</that>
+            <that>* DO YOU WANT TO GO TO IT</that>
             <template><get name="address"/></template>
         </category>
 
         <category>
             <pattern>NO</pattern>
-            <that>DO YOU WANT TO GO TO IT</that>
+            <that>* DO YOU WANT TO GO TO IT</that>
             <template>OK</template>
         </category>
 
