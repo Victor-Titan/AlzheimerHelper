@@ -25,7 +25,9 @@ def handle_request():
     if request.args['type'] == 'register':
         register(request.args['name'], request.args['address'], request.args['phno'], request.args['dad'], request.args['mom'], request.args['emcon'], request.args['guardian'], request.args['age']);
     elif request.args['type'] == 'response':
-        return kernel.respond(request.args['message'])
+        string = kernel.respond(request.args['message'])
+        if(len(string)==0): return "I didn't get you."
+        else: return kernel.respond(request.args['message'])
     return "something"
 
 app.run(host="0.0.0.0", port=5000, debug=True)
