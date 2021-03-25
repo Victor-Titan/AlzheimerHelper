@@ -48,6 +48,16 @@
         </category>
 
         <category>
+            <pattern>TAKE ME HOME</pattern>
+            <template><get name="address"/></template>
+        </category>
+        
+        <category>
+            <pattern>* TAKE ME HOME</pattern>
+            <template><get name="address"/></template>
+        </category>
+
+        <category>
             <pattern>YES</pattern>
             <that>* DO YOU WANT TO GO TO IT</that>
             <template><get name="address"/></template>
@@ -80,6 +90,57 @@
             </template>
         </category>
 
+        
+
+        <category>
+            <pattern>DAD</pattern>
+            <template><srai>WHO IS MY FATHER</srai></template>
+            
+        </category>
+
+        <category>
+            <pattern>* DAD</pattern>
+            <template><srai>WHO IS MY FATHER</srai></template>
+            
+        </category>
+
+        <category>
+            <pattern>* MOM</pattern>
+            <template><srai>WHO IS MY MOM</srai></template>
+            
+        </category>
+
+        <category>
+            <pattern>MOM</pattern>
+            <template><srai>WHO IS MY MOM</srai></template>
+            
+        </category>
+
+        <category>
+            <pattern>* MOTHER</pattern>
+            <template><srai>WHO IS MY MOM</srai></template>
+            
+        </category>
+
+        <category>
+            <pattern>MOTHER</pattern>
+            <template><srai>WHO IS MY MOM</srai></template>
+            
+        </category>
+
+        <category>
+            <pattern>* FATHER</pattern>
+            <template><srai>WHO IS MY FATHER</srai></template>
+            
+        </category>
+
+        <category>
+            <pattern>FATHER</pattern>
+            <template><srai>WHO IS MY FATHER</srai></template>
+            
+        </category>
+
+        
         <category>
             <pattern>
                 WHO IS MY MOM 
@@ -98,6 +159,33 @@
             </template>
         </category>
 
+        <category>
+            <pattern>
+                TROUBLE
+            </pattern>
+            <template>
+                <srai>HELP</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>
+                * TROUBLE
+            </pattern>
+            <template>
+                <srai>HELP</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>
+                TROUBLE *
+            </pattern>
+            <template>
+                <srai>HELP</srai>
+            </template>
+        </category>
+        
         <category>
             <pattern>
                 HELP *
@@ -134,6 +222,15 @@
         <category>
             <pattern>
                 THANK YOU *
+            </pattern>
+            <template>
+                <srai>THANK YOU</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>
+                * THANK YOU
             </pattern>
             <template>
                 <srai>THANK YOU</srai>
