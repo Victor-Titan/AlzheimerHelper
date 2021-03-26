@@ -55,6 +55,7 @@ while True:
         emcon=input("Enter emcon: ")
         guardian=input("Enter guardian's name: ")
         age=input("Enter age: ")
+
         register(name, pwd, address, phno, dad, mom, emcon, guardian, age)
         break
     
@@ -63,6 +64,7 @@ while True:
 
 #name = input("Enter your name: ")
 #kernel.setPredicate('name',name)
+conn.execute("CREATE TABLE if not exists convo (user TEXT, bot TEXT)")
 while True:
     message = input(">>")
     if message == "quit" or message == "exit":
@@ -70,4 +72,6 @@ while True:
         exit()
     else:
         bot_response = kernel.respond(message)
+        conn.execute("INSERT INTO convo (user,bot) VALUES (?,?)",(message,bot_response))
+        conn.commit()
         print (">>"+bot_response)

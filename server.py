@@ -1,9 +1,13 @@
 from flask import request, Flask
 import aiml
 import os
+import sqlite3
 
 app = Flask(__name__)
-kernel = aiml.Kernel()
+kernel = aiml.Kernel() 
+conn = sqlite3.connect('users.db')
+conn.execute("CREATE TABLE if not exists convo (user TEXT, bot TEXT)")
+conn.execute("DELETE FROM convo")
 if os.path.isfile("bot_brain.brn"):
     kernel.bootstrap(brainFile = "bot_brain.brn")
 else:
@@ -23,10 +27,12 @@ def register(name, address, phno, dad, mom, emcon, guardian, age):
 @app.route('/', methods=['GET', 'POST'])
 def handle_request():
     if request.args['type'] == 'register':
-        register(request.args['name'], request.args['address'], request.args['phno'], request.args['dad'], request.args['mom'], request.args['emcon'], request.args['guardian'], request.args['age']);
+        register(request.args['name'], request.args['address'], request.args['phno'], request.args['dad'], request.args['mom'], request.args['emcon'], request.args['guardian'], request.args['age'])
     elif request.args['type'] == 'response':
-        string = kernel.respond(request.args['message'])
-        if(len(string)==0): return "I didn't get you."
+        bot_response = kernel.respond(request.args['message'])
+        conn.execute("INSERT INTO convo (user,bot) VALUES (?,?)",(request.args['message'],bot_response))
+        conn.commit()
+        if(len(bot_response)==0): return "I didn't get you."
         else: return kernel.respond(request.args['message'])
     return "something"
 

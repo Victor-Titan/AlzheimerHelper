@@ -41,7 +41,7 @@
             
         <category>
             <pattern>HOW ARE YOU</pattern>
-                <template>I AM FINE WHAT ABOUT YOU</template>
+                <template>I am fine</template>
         </category>
         
         <category>
@@ -74,14 +74,5 @@
             <template>
                 <srai>HELLO</srai>
             </template>
-        </category>
-
-        
-
-
-
-
-        
-
-        
+        </category>        
     </aiml>
