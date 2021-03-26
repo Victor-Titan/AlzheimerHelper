@@ -8,6 +8,7 @@ kernel = aiml.Kernel()
 conn = sqlite3.connect('users.db')
 conn.execute("CREATE TABLE if not exists convo (user TEXT, bot TEXT)")
 conn.execute("DELETE FROM convo")
+conn.commit()
 if os.path.isfile("bot_brain.brn"):
     kernel.bootstrap(brainFile = "bot_brain.brn")
 else:

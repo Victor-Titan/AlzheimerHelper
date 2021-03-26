@@ -5,6 +5,8 @@ import sqlite3
 kernel = aiml.Kernel()
 conn = sqlite3.connect('users.db')
 cur = conn.cursor()
+conn.execute("CREATE TABLE if not exists convo (user TEXT, bot TEXT)")
+conn.execute("DELETE FROM convo")
 
 if os.path.isfile("bot_brain.brn"):
     kernel.bootstrap(brainFile = "bot_brain.brn")
@@ -64,7 +66,7 @@ while True:
 
 #name = input("Enter your name: ")
 #kernel.setPredicate('name',name)
-conn.execute("CREATE TABLE if not exists convo (user TEXT, bot TEXT)")
+#conn.execute("CREATE TABLE if not exists convo (user TEXT, bot TEXT)")
 while True:
     message = input(">>")
     if message == "quit" or message == "exit":
