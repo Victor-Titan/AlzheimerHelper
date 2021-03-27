@@ -140,7 +140,21 @@
             
         </category>
 
+        <category>
+            <pattern>DOCTOR</pattern>
+            <template>You can call your doctor at <get name="phno"/></template>
+        </category>
         
+        <category>
+            <pattern>* DOCTOR</pattern>
+            <template>You can call your doctor at <get name="phno"/></template>
+        </category>
+        
+        <category>
+            <pattern>DOCTOR *</pattern>
+            <template>You can call your doctor at <get name="phno"/></template>
+        </category>
+
         <category>
             <pattern>
                 WHO IS MY MOM 

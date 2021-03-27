@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml> 
+        
+        <category>
+            <pattern>SET NAME TO *</pattern>
+            <template>Setting name to <set name="name"><star/></set></template>
+        </category>
+
+        <category>
+            <pattern>SET FATHER NAME TO *</pattern>
+            <template>Setting father's name to <set name="fname"><star/></set></template>
+        </category>
+
+        <category>
+            <pattern>SET MOTHER NAME TO *</pattern>
+            <template>Setting mother's name to <set name="mom"><star/></set></template>
+        </category>
+
+        <category>
+            <pattern>SET DAD NAME TO *</pattern>
+            <template>Setting dad's name to <set name="fname"><star/></set></template>
+        </category>
+
+        <category>
+            <pattern>SET MOM NAME TO *</pattern>
+            <template>Setting mom's name to <set name="mom"><star/></set></template>
+        </category>
+
+        <category>
+            <pattern>SET EMERGENCY CONTACT TO *</pattern>
+            <template>Setting emergency contact to <set name="emcon"><star/></set></template>
+        </category>
+
+        <category>
+            <pattern>SET GUARDIAN NAME TO *</pattern>
+            <template>Setting guardian's name to <set name="guardian"><star/></set></template>
+        </category>
+
+        
+
+
+</aiml>
